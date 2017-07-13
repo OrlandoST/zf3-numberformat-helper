@@ -1,5 +1,5 @@
 {
-	"name": "armenio/zf3-jsondecode-helper",
+	"name": "OrlandoST/zf3-numberformat-helper",
 	"description": "Number format View Helper for Zend Framework 3",
 	"type": "library",
 	"keywords": [
