@@ -1,0 +1,28 @@
+{
+	"name": "armenio/zf3-jsondecode-helper",
+	"description": "Number format View Helper for Zend Framework 3",
+	"type": "library",
+	"keywords": [
+		"view",
+		"helper",
+		"number",
+		"format",
+		"zf3",
+		"orlandost"
+	],
+	"homepage": "https://github.com/OrlandoST/zf3-numberformat-helper",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Pavel Orlov",
+			"email": "orlandop@rambler.ru"
+		}
+	],
+	"require": {
+	},
+    "autoload": {
+        "psr-4": {
+            "Orlandost\\NumberFormatHelper\\": "src/"
+        }
+    }
+}
