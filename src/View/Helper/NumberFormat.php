@@ -11,19 +11,25 @@ use Zend\View\Helper\AbstractHelper;
 
 /**
  * Class NumberFormat
+ * This helper format float number
  * @package Orlandost\NumberFormatHelper\View\Helper
  */
 class NumberFormat extends AbstractHelper
 {
     /**
-     * @param $number
-     * @param $decimals
-     * @param $$dec_point
-     * @param $thousands_sep
+     * @param float  $number
+     * @param int    $decimals
+     * @param string $dec_point
+     * @param string $thousands_sep
      * @return string
      */
-    public function __invoke(float $number, int $decimals = 2 , string $dec_point = "." , string $thousands_sep = " ")
+    public function __invoke($number = NULL, $decimals = 0 , $dec_point = "." , $thousands_sep = " ")
     {
-        return number_format( $number, $decimals, $dec_point, $thousands_sep );
+        if (!$number || !is_float($number)){
+            if (!$number = (float) $number)
+                return '';
+        } 
+        
+        return trim(number_format( $number, $decimals, $dec_point, $thousands_sep));
     }
 }
